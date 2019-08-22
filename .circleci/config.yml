@@ -3,7 +3,9 @@
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
 version: 2.1
-jobs: 
+#orbs:
+ # pr-comment: benjlevesque/pr-comment@0.1.4
+jobs:
   build:
     docker:
       # specify the version you desire here
@@ -81,5 +83,5 @@ jobs:
           when: on_fail
           
      #  Comment on Pull Request if build fails due to security issues
-      - pr-comment/pr-comment:
-          comment: "Build result - $BUILD_RESULT"
+     # - pr-comment/pr-comment:
+     #     comment: "Build result - $BUILD_RESULT"
