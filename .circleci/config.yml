@@ -60,9 +60,11 @@ jobs:
           command: sl analyze --wait --tag branch=$CIRCLE_BRANCH --app $APP_NAME target/hello-shiftleft-0.0.1.jar
           
      #  Prioritize security bugs
+     #  [Run user acceptance smoke tests related to security]
       - run: 
           name: Prioritize security bugs
           command: sh uat.sh
+          
      #  Test Security Results
       - run: 
           name: Assert build quality against security standards
