@@ -21,8 +21,7 @@ RUN apt-get update; apt-get install maven default-jdk -y; update-alternatives --
 
 ### Build
 COPY . .
-RUN mvn clean package
-# ; cp target/*.jar /usr/local/tomcat/webapps/
+RUN mvn clean package ; cp target/*.jar /usr/local/tomcat/webapps/
 
 ### Analyze
 RUN sl analyze --app Hello_git_actions --wait
