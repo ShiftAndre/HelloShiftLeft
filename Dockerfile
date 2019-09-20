@@ -24,7 +24,7 @@ COPY . .
 RUN mvn clean package ; cp target/*.jar /usr/local/tomcat/webapps/
 
 ### Analyze
-cd target; ls; RUN sl analyze --app Hello_git_actions --wait
+RUN cd target; ls; sl analyze --app Hello_git_actions --wait
 
 ### Run
 #CMD ["sl", "run", "catalina.sh","run"]
