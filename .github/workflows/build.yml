@@ -6,6 +6,7 @@ jobs:
     name: Build image
     runs-on: ubuntu-latest
     steps:
+
       - uses: actions/checkout@master
       - name: Docker build
         uses: actions/docker/cli@86ff551d26008267bb89ac11198ba7f1d807b699
