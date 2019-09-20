@@ -20,11 +20,11 @@ COPY --from=shiftleft-stage /root/.shiftleft /root/.shiftleft
 RUN apt-get update; apt-get install maven default-jdk -y; update-alternatives --config javac
 
 ### Build
-COPY . .
-RUN mvn clean package ; cp target/*.war /usr/local/tomcat/webapps/
+#COPY . .
+#RUN mvn clean package ; cp target/*.jar /usr/local/tomcat/webapps/
 
 ### Analyze
 RUN sl analyze --app Hello_git_actions --wait
 
 ### Run
-CMD ["sl", "run", "catalina.sh","run"]
+#CMD ["sl", "run", "catalina.sh","run"]
