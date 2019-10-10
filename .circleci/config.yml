@@ -76,8 +76,7 @@ jobs:
             echo $BUILD_RESULT
             SUCCESS=$(echo $BUILD_RESULT | grep "success")
             if [ -z "$SUCCESS" ]; then
-                pr-comment 
-                #exit 1;
+                pr-comment                 
                 exit 0 #Don't fail the build at the moment. 
             fi
             exit 0
