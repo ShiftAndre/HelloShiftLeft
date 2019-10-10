@@ -22,8 +22,8 @@ public class SearchController {
     java.lang.Object message = new Object();
     try {
       ExpressionParser parser = new SpelExpressionParser();
-      Expression exp = parser.parseExpression(foo);
-      message = (Object) exp.getValue();
+      //Expression exp = parser.parseExpression(foo);
+      //message = (Object) exp.getValue();
     } catch (Exception ex) {
       System.out.println(ex.getMessage());
     }
