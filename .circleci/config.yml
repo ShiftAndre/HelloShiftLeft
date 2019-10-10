@@ -57,7 +57,7 @@ jobs:
      # Analyze for security
       - run: 
           name: Analyze for security bugs
-          command: sl analyze --wait --tag branch=$CIRCLE_BRANCH --app $APP_NAME target/hello-shiftleft-0.0.1.jar
+          command: sl analyze --wait --version-id $CIRCLE_BUILD_NUM  --tag branch=$CIRCLE_BRANCH --app $APP_NAME target/hello-shiftleft-0.0.1.jar
           
      #  Prioritize security bugs
      #  [Run user acceptance smoke tests related to security]
