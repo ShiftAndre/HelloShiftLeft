@@ -73,8 +73,7 @@ jobs:
             echo $BUILD_RESULT
             SUCCESS=$(echo $BUILD_RESULT | grep "success")
             if [ -z "$SUCCESS" ]; then
-                echo Filter triggered: Todo: add code for pr-comment and exit 1
-                pr-comment
+                echo Filter triggered: Todo: add code for pr-comment and exit 1                
                 exit 0
             fi
             exit 0
