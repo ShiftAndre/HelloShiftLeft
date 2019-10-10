@@ -74,6 +74,8 @@ jobs:
             SUCCESS=$(echo $BUILD_RESULT | grep "success")
             if [ -z "$SUCCESS" ]; then
                 pr-comment                 
+                exit 0
+            fi
             exit 0
     
      #  Comment on Pull Request if build fails due to security issues
